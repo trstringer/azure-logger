@@ -1,6 +1,6 @@
 {
   "name": "azure-logger",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Log and retrieve your application messages easily with Azure",
   "main": "index.js",
   "scripts": {
