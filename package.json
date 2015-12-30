@@ -11,6 +11,10 @@
   ],
   "author": "Thomas Stringer",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tstringer/azure-logger.git"
+  },
   "dependencies": {
     "azure-storage": "^0.7.0",
     "node-uuid": "^1.4.7"

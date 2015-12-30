@@ -2,7 +2,7 @@
 
 Node.js is a first-class citizen in Azure.  Logging is a necessary and important requirement of any application, and this module makes it extremely easy to quickly log entries (and subsequently read them) into an Azure storage table for later consumption/troubleshooting/etc.
 
-**TL;DR ** *an easy way to log messages/entries/errors in Azure*
+**TL;DR** *an easy way to log messages/entries/errors in Azure*
 
 ## Installation
 
