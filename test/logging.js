@@ -3,6 +3,8 @@ var logger = require('../index');
 var uuid = require('node-uuid');
 
 describe('Logging to Azure table', function () {
+    this.timeout(0);
+  
     it('should successfully log entry with defaults', function (done) {
         logger.log({myData: 1, whatever: uuid.v4()}, function (err, res) {
             assert.equal(err, null);
@@ -22,6 +24,7 @@ describe('Logging to Azure table', function () {
         var entry = {myData: 1, whatever: uuid.v4()};
         logger.log(entry, function (err, res) {
             logger.get(function (err, entries) {
+                // console.log('entries length : ' + entries.length);
                 assert.ok(entries.length > 0);
                 done();
             });
