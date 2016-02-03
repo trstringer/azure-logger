@@ -24,7 +24,6 @@ describe('Logging to Azure table', function () {
         var entry = {myData: 1, whatever: uuid.v4()};
         logger.log(entry, function (err, res) {
             logger.get(function (err, entries) {
-                // console.log('entries length : ' + entries.length);
                 assert.ok(entries.length > 0);
                 done();
             });
