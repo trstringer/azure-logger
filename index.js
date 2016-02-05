@@ -13,7 +13,10 @@ var logger = {
         var tableName = (options && options.table) ? options.table : 'loggerdefault';
         var partition = (options && options.partition) ? options.partition : 'default';
         
-        var tableService = azure.createTableService();
+        var accountName = (options && options.cred && options.cred.accountName) ? options.cred.accountName : process.env.AZURE_STORAGE_ACCOUNT;
+        var accountKey = (options && options.cred && options.cred.accountKey) ? options.cred.accountKey : process.env.AZURE_STORAGE_ACCESS_KEY;  
+        
+        var tableService = azure.createTableService(accountName, accountKey);
         var query = new azure.TableQuery()
             .where('PartitionKey eq ?', partition);
             
